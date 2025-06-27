@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --salsa-red: #DC2626;
+    --salsa-orange: #EA580C;
+    --salsa-yellow: #FBBF24;
+    --salsa-green: #16A34A;
+    --dark-100: #1F2937;
+    --dark-200: #111827;
+    --dark-300: #0F172A;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-display {
+    font-family: 'Fredoka', cursive;
+  }
+}
+
+@layer components {
+  .salsa-logo-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.3));
+  }
+  
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .sombrero {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .chili-body {
+    animation: wiggle 2s ease-in-out infinite;
+  }
+  
+  .emoji {
+    animation: bounce 2s infinite;
+  }
+}
+
+@layer utilities {
+  .text-salsa-red {
+    color: var(--salsa-red);
+  }
+  
+  .text-salsa-orange {
+    color: var(--salsa-orange);
+  }
+  
+  .text-salsa-yellow {
+    color: var(--salsa-yellow);
+  }
+  
+  .text-salsa-green {
+    color: var(--salsa-green);
+  }
+  
+  .bg-salsa-red {
+    background-color: var(--salsa-red);
+  }
+  
+  .bg-salsa-orange {
+    background-color: var(--salsa-orange);
+  }
+  
+  .bg-salsa-yellow {
+    background-color: var(--salsa-yellow);
+  }
+  
+  .bg-salsa-green {
+    background-color: var(--salsa-green);
+  }
+  
+  .bg-dark-100 {
+    background-color: var(--dark-100);
+  }
+  
+  .bg-dark-200 {
+    background-color: var(--dark-200);
+  }
+  
+  .bg-dark-300 {
+    background-color: var(--dark-300);
+  }
+  
+  .border-salsa-red {
+    border-color: var(--salsa-red);
+  }
+  
+  .border-salsa-orange {
+    border-color: var(--salsa-orange);
+  }
+  
+  .border-salsa-yellow {
+    border-color: var(--salsa-yellow);
+  }
+  
+  .border-salsa-green {
+    border-color: var(--salsa-green);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 43% {
+    transform: translateY(-8px);
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+}
