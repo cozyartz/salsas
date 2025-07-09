@@ -54,14 +54,6 @@
   .emoji {
     animation: bounce 2s infinite;
   }
-}
-
-@layer utilities {
-  .text-salsa-red {
-    color: var(--salsa-red);
-  }
-  
-  .text-salsa-orange {
     color: var(--salsa-orange);
   }
   
